@@ -13,12 +13,13 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Instructions
-URL slides: https://rpubs.com/marco-antonio-bejar-villalba/721903
-URL app: https://marco-antonio-bejar-villalba.shinyapps.io/assigment/
-URL github: https://github.com/marco-antonio-bejar-villalba/ShinyApplication
-
-
 This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+[Link to slide](https://rpubs.com/marco-antonio-bejar-villalba/721903)
+
+[Link to app](https://marco-antonio-bejar-villalba.shinyapps.io/assigment/)
+
+[Link to github](https://github.com/marco-antonio-bejar-villalba/ShinyApplication)
 
 ## Data
 
