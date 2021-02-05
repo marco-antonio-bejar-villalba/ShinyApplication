@@ -1,0 +1,58 @@
+---
+title: "Final assigment"
+author: "Marco Antonio Béjar Villalba"
+date: "5/2/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+library(maddison)
+library(dplyr)
+library(maddison)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Instructions
+URL slides: https://rpubs.com/marco-antonio-bejar-villalba/721903
+URL app: https://marco-antonio-bejar-villalba.shinyapps.io/assigment/
+URL github: https://github.com/marco-antonio-bejar-villalba/ShinyApplication
+
+
+This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+## Data
+
+This app uses the madisson data set to show the GDP per capita of many countries.
+
+Will use only a few countries in order to have a short code that can be reviewed easily.
+
+The app has only two controls, one for the country and another for the date.
+
+The date control is a slider, you can select the dates in interval and with the other
+control you can select among some few countries.
+
+## Cleaning
+
+I use the folowing code to clean the data.
+
+```{r cars, echo = TRUE}
+data("maddison")
+plotCountry<-function(aCountry="Austria",fromYear="1950",toYear="2010"){
+  fromYearasDate=as.Date(paste(fromYear,"-01-01",sep=""))
+  toYearasDate=as.Date(paste(toYear,"-01-01",sep=""))
+  dataFiltered<-filter(maddison,
+                       !is.null(gdp_pc),
+                       country==aCountry,
+                       year>fromYearasDate,
+                       year<toYearasDate)
+  plot(dataFiltered$year,dataFiltered$gdp_pc, type="l")
+}
+```
+
+## Slide with Plot
+
+Here an example
+```{r pressure}
+plotCountry()
+```
+
